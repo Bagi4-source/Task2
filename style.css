@@ -9,6 +9,7 @@ body {
     margin: 0;
 }
 
+
 a {
     text-decoration: none;
     color: black;
@@ -18,9 +19,13 @@ li a:hover {
     color: #ff8000;
 }
 
+#links {
+    font-size: 12pt;
+}
+
 header {
     background: rgba(141, 141, 255, 0.48);
-    height: 140px;
+    height: 100px;
     width: 100%;
 }
 
@@ -48,24 +53,21 @@ footer {
 
 .logo-name {
     margin-top: 45px;
-    font-size: 20pt;
+    font-size: 16pt;
 }
 
 .nav-items {
     display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-around;
     font-size: 14pt;
-}
-
-.nav-item:hover {
-    text-decoration: underline;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
 }
 
 .copyright {
     margin: 5px;
     text-align: center;
-    font-size: 12pt;
+    font-size: 8pt;
 }
 
 .field {
@@ -80,9 +82,11 @@ th, td {
     border: solid 1px #000;
     padding: 5px;
 }
+
 thead {
     background-color: #c7c7c7;
 }
+
 tbody tr:nth-child(odd) {
     background-color: #f5f5f5;
 }
@@ -90,7 +94,67 @@ tbody tr:nth-child(odd) {
 tbody tr:nth-child(even) {
     background-color: #c7c7c7;
 }
-td:hover{
+
+td:hover {
     background: #4b4b4b;
     color: #ffffff;
+}
+
+
+@media screen and (min-width: 426px) {
+    #links {
+        font-size: 14pt;
+    }
+
+    .logo-img img {
+        width: 120px;
+        height: 120px;
+    }
+
+    header {
+        height: 140px;
+    }
+
+    footer {
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+        align-items: center;
+        background: rgb(70, 70, 70);
+        height: 120px;
+        width: 100%;
+        color: white;
+    }
+
+    .logo-img {
+        float: left;
+        margin-right: 10px;
+    }
+
+    .content {
+        padding: 10px;
+        max-width: 960px;
+        margin: auto;
+    }
+
+    .logo-name {
+        margin-top: 45px;
+        font-size: 20pt;
+    }
+
+    .nav-items {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        font-size: 14pt;
+    }
+
+    .nav-item:hover {
+        text-decoration: underline;
+    }
+
+    .copyright {
+        font-size: 12pt;
+    }
 }
